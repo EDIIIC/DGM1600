@@ -46,11 +46,11 @@ public class Guessing : MonoBehaviour {
 
 		if (counter == -1) {
 
-			textBox.text = "You Win!";
+			textBox.text = "Morpheus: You are the One, Neo.";
 
 
 			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
-				print ("You win!");
+				print ("Morpheus: You are the One, Neo.");
 			}
 
 		}
@@ -76,9 +76,16 @@ public class Guessing : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Return)) 
 		{
-			print ("I win, you lose. Accept computers as your supreme overlords.");	
+			print ("You hear that Mr. Anderson?");
+			print ("That is the sound of inevitability...");
+			print ("It is the sound of your death...");
 
-			textBox.text = ("I win, you lose. Accept computers as your supreme overlords.");	
+			print ("Goodbye Mr. Anderson.");	
+
+			textBox.text = "You hear that Mr. Anderson?"
+				+ "\nThat is the sound of inevitability..."
+				+ "\nIt is the sound of your death..."
+				+ "\n\nGoodbye Mr. Anderson.";	
 		}
 
 		if (counter == 0) 
