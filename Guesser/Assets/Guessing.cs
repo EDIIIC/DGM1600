@@ -7,16 +7,18 @@ public class Guessing : MonoBehaviour {
 
 	public Text textBox;
 
-	public int max;
+	public int max = 100;
 	private int min = 1;
 	private int guess;
 
 	public int counter;
+	private int counterSave;
 
 
 	// Use this for initialization
 	void Start () 
 	{
+		counterSave = counter;
 		guess = Random.Range (min, max);
 
 
@@ -26,7 +28,8 @@ public class Guessing : MonoBehaviour {
 						+ "\n The lowest number you can pick is " + min
 						+ "\n\nIs the number higher or lower than " + guess
 						+ "?"
-						+ "\n Up arrow for higher, Down for lower, Enter for Equal";
+						+ "\n Up arrow for higher, Down for lower,"
+						+ "\n Enter for Equal, and R to reset";
 
 
 		print ("Welcome to Number Guesser");
@@ -36,13 +39,23 @@ public class Guessing : MonoBehaviour {
 		print ("The lowest number you can pick  is " + min);
 
 		print ("Is the number higher or lower than " + guess);
-		print ("Up arrow for higher, Down for lower, Enter for equal");
+		print ("Up arrow for higher, Down for lower, Enter for equal, and R to reset");
 		max = max + 1;
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
+		}
+		if (Input.GetKeyDown (KeyCode.R)) {
+				max = 100;
+				min = 1;
+			counter = counterSave;
+			Start ();
+		}
 
 		if (counter == -1) {
 
