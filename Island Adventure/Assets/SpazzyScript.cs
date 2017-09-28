@@ -173,7 +173,7 @@ public class SpazzyScript : MonoBehaviour {
 		textObject.text = "You are now at the Leaning tree." +
 			"\n\nPress K to knock it over for a raft." +
 			"\nPress G to go further." +
-			"\nPress Return to go back.";
+			"\nPress Return to go back to the forest opening.";
 
 		if (Input.GetKeyDown (KeyCode.K)) {
 			myState = States.NativesKilled;
