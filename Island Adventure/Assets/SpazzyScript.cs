@@ -334,8 +334,9 @@ public class SpazzyScript : MonoBehaviour {
 	}
 
 	void State_Poison(){
-		textObject.text = "The insects were poisonous!" +
-			"\nYou are thrown into the lava and burn to death!"+
+		textObject.text = "The insects are poisonous!" +
+			"\nOne bites your hand and you sufficate" +
+			"\nas your body is fully paralyzed!"+
 			"\n\nPress Return to Play Again." +
 			"\nPress Escape to Close Game";
 
@@ -431,8 +432,9 @@ public class SpazzyScript : MonoBehaviour {
 	}
 
 	void State_SharkDeath(){
-		textObject.text = "You tried swimming away from a shark..." +
-			"You are killed."+
+		textObject.text = "You tried swimming away from a shark." +
+			"\nJust think about that for a second." +
+			"\nYou are killed."+
 			"\n\nPress Return to Play Again." +
 			"\nPress Escape to Close Game";
 
