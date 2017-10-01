@@ -148,7 +148,7 @@ public class SpazzyScript : MonoBehaviour {
 			"\nAnd is that obsidion down there? " +
 			"\nYou could make tools!" +
 			"\n\nPress I to investigate." +
-			"\nPress G to go back.";
+			"\nPress Return to go back.";
 
 		if (Input.GetKeyDown (KeyCode.I)) {
 			myState = States.VolcanoDeath;
