@@ -483,7 +483,7 @@ Prefab:
         type: 2}
       propertyPath: picture.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 2e1f736c826f44930901a5d71eb4ebe1,
+      objectReference: {fileID: 21300000, guid: 7937d7b70fb1e417bb77038e1f24ae3b,
         type: 3}
     - target: {fileID: 114386762633844766, guid: 79eb56a28b3cd4e1caa72f233d8e7c42,
         type: 2}
