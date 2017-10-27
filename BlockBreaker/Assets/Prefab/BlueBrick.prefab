@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  picture:
+  - {fileID: 21300000, guid: e63d5aaa4732948c389a84da6eda397d, type: 3}
 --- !u!212 &212060698858946820
 SpriteRenderer:
   m_ObjectHideFlags: 1
