@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-//speed variable
+	//speed variable
 	public GameObject projectile;
 	public Transform shotPos;
 	public float shotForce;
 	public float moveSpeed;
 	private Rigidbody2D rb;
+
 
 	void Update () {
 
@@ -18,12 +19,25 @@ public class PlayerController : MonoBehaviour {
 			shot.GetComponent<Rigidbody2D> ().AddForce (shotPos.up * shotForce);
 		}
 
+
 		float h = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 		float v = Input.GetAxis ("Vertical") * Time.deltaTime * moveSpeed;
 
 		transform.Translate (new Vector3 (h, v, 0f));
 
+		Vector3 pos = Camera.main.WorldToScreenPoint (transform.position);
+		Vector3 dir = Input.mousePosition - pos;
+		float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
+
+
+
+
+
+
+
+		//--BACKUP MOVEMENT--
 		//if (Input.GetKey (KeyCode.UpArrow))
 		//{
 		//	Vector3 position = this.transform.position;
@@ -48,7 +62,6 @@ public class PlayerController : MonoBehaviour {
 		//	position.x-=0.35f;
 		//	this.transform.position = position;
 		//}
-
 
 	}
 }
