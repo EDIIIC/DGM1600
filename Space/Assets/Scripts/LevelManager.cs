@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
 
-	public static int brickCount;
+	public static int MeteorCount;
+	public static int LaserCount;
 
 
 	void Start(){
