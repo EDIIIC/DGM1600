@@ -2,24 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
-	//speed variable
+	public float thrusterForce;
 	public GameObject projectile;
 	public Transform shotPos;
 	public float shotForce;
-	public float moveSpeed;
-	private Rigidbody2D rb;
+	public ParticleSystem particles;
 
+	private Rigidbody2D rigid;
+	public int health;
+	public float moveSpeed;
+
+	void Start () {
+		rigid = GetComponent<Rigidbody2D> ();
+	}
 
 	void Update () {
+		
+		if (Input.GetKey (KeyCode.W)) {
+			rigid.AddRelativeForce (new Vector2 (0f, thrusterForce), ForceMode2D.Force);
+			particles.Emit (1);
+		} else {
+			//particles.Stop ();
+		}
+		if (Input.GetKey (KeyCode.UpArrow)) {
+			rigid.AddRelativeForce (new Vector2 (0f, thrusterForce), ForceMode2D.Force);
+			particles.Emit (1);
+		} else {
+			//particles.Stop ();
+		}
 
+			
 		if (Input.GetButtonDown ("Fire1")) {
 			GameObject shot = Instantiate (projectile, shotPos.position, shotPos.rotation) as GameObject;
 			shot.GetComponent<Rigidbody2D> ().AddForce (shotPos.up * shotForce);
 		}
-
-
+			
+		//KEYS TO MOVE
 		float h = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 		float v = Input.GetAxis ("Vertical") * Time.deltaTime * moveSpeed;
 
@@ -36,6 +58,13 @@ public class PlayerController : MonoBehaviour {
 
 
 
+
+		//switch (health) {
+		//case 1: //do this stuff; break;
+		//case 2:
+		//default:
+		//	break;
+		//}
 
 		//--BACKUP MOVEMENT--
 		//if (Input.GetKey (KeyCode.UpArrow))

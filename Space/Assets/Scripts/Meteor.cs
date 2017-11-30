@@ -7,36 +7,76 @@ public class Meteor : MonoBehaviour {
 	public int health;
 	public Sprite[] picture;
 	private int count = 0;
-	private LevelManager levelManager;
 	public float startingSpin;
+	public float speed;
 
+	private GameObject Player;
+	private Rigidbody2D rigid;
 
 	void Start () {
-		GetComponent<Rigidbody2D> ().AddTorque (Random.Range(-startingSpin,startingSpin),ForceMode2D.Impulse);
+		
+		Player = FindObjectOfType<PlayerController> ().gameObject;
+		rigid = GetComponent<Rigidbody2D> ();
 
-		levelManager = FindObjectOfType<LevelManager> ();
+		//Where to go      
+		transform.right = Player.transform.position - transform.position;
+
+		//speed
+		rigid.AddRelativeForce(new Vector2(Random.Range(0,speed),0f),ForceMode2D.Force);
+
+		//Random Rotation
+		rigid.AddTorque (Random.Range(-startingSpin,startingSpin),ForceMode2D.Impulse);
+
 	}
+		
+	private void OnCollisionEnter2D(Collision2D coll){
+		coll.gameObject.GetComponent<Health> ().IncrementHealth (-1);
 
+				health--;
+				count++;
+				if (count > picture.Length - 1) {
+					count--;
+				}
 
-	void OnCollisionEnter2D (Collision2D myCollider) {
+				GetComponent<SpriteRenderer>().sprite = picture[count];
 
-		//Take away health
-		health--;
-		count++;
-		if (count > picture.Length - 1) {
-			count--;
+				if (health <= 0) {
+					LevelManager.MeteorCount--;
+					Destroy (this.gameObject);
 		}
-		//if health is < 0 destroy brick
-		GetComponent<SpriteRenderer>().sprite = picture[count];
-		//change the picture
-		if (health <= 0) {
-			LevelManager.MeteorCount--;
-//			levelManager.CheckMeteorCount ();
-			Destroy (this.gameObject);
-
-	}
-
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//	void OnCollisionEnter2D (Collision2D myCollider) {
+
+//		health--;
+//		count++;
+//		if (count > picture.Length - 1) {
+//			count--;
+//		}
+
+//		GetComponent<SpriteRenderer>().sprite = picture[count];
+
+//		if (health <= 0) {
+//			LevelManager.MeteorCount--;
+//			Destroy (this.gameObject);
+//	}
+
+
+//	}
