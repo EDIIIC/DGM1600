@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-
+	public static int PlayerCount;
 	public static int MeteorCount;
 	public static int LaserCount;
 
@@ -27,6 +27,12 @@ public class LevelManager : MonoBehaviour {
 	public void LoadNextLevel (){
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 	}
-		
+
+	public void CheckPlayerCount () {
+		if (PlayerCount <= 0) {
+			LoadNextLevel ();
+		}
+	}
+
 }
 	

@@ -25,10 +25,17 @@ public class Meteor : MonoBehaviour {
 		rigid.AddRelativeForce(new Vector2(Random.Range(0,speed),0f),ForceMode2D.Force);
 
 		//Random Rotation
-		//rigid.AddTorque (Random.Range(-startingSpin,startingSpin),ForceMode2D.Impulse);
+		rigid.AddTorque (Random.Range(-startingSpin,startingSpin),ForceMode2D.Impulse);
 
 	}
-		
+
+	private void OnCollisionEnter2D(Collision2D coll){
+		coll.gameObject.GetComponent<Health> ().IncrementHealth (-1);
+	}
+
+
+
+
 	/*
 	private void OnCollisionEnter2D(Collision2D coll){
 		coll.gameObject.GetComponent<Health> ().IncrementHealth (-1);

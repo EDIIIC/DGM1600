@@ -1,24 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
 	public int health;
 	public GameObject explosionEffect;
 	public GameObject[] hearts;
-
-	private bool mePlayer;
+//	public GameObject scoreboard;
 
 	private void Start(){
 	
-		if (GetComponent<PlayerController> ()) {
-			mePlayer = true;
-		}
-		if (mePlayer) {
+		if (MePlayer()) {
 			ShowHearts ();
 		}
-
+	}
+	private bool MePlayer(){
+		if (GetComponent<PlayerController> ()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public void IncrementHealth(int damage) {
@@ -26,8 +29,14 @@ public class Health : MonoBehaviour {
 		if (health <= 0) {
 			Destroy (gameObject);
 			Instantiate (explosionEffect, transform.position, Quaternion.identity);
+			if (!MePlayer ()) {
+//				IncrementScore ();
+			}
+			if (MePlayer()) {
+				gameObject.GetComponent<PlayerController> ().levelManager.GetComponent<LevelManager> ().LoadNextLevel ();
+			}
 		}
-		if (mePlayer) {
+		if (MePlayer()) {
 			ShowHearts ();
 		}
 	}
@@ -44,4 +53,10 @@ public class Health : MonoBehaviour {
 	
 	}
 
+
+	public int GetHealth(){
+		return health;
+	}
+
+//	private void IncrementScore
 }

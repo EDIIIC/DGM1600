@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
@@ -11,14 +11,21 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotPos;
 	public float shotForce;
 	public ParticleSystem particles;
-
 	private Rigidbody2D rigid;
 	public int health;
 	public float moveSpeed;
+	public GameObject levelManager;
+
 
 	void Start () {
 		rigid = GetComponent<Rigidbody2D> ();
+
+		print (GetComponent<Health> ().GetHealth () );
+
+
 	}
+
+
 
 	void Update () {
 		
