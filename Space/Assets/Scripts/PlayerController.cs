@@ -21,25 +21,21 @@ public class PlayerController : MonoBehaviour {
 		rigid = GetComponent<Rigidbody2D> ();
 
 		print (GetComponent<Health> ().GetHealth () );
-
-
 	}
-
-
-
+		
 	void Update () {
 		
 		if (Input.GetKey (KeyCode.W)) {
 			rigid.AddRelativeForce (new Vector2 (0f, thrusterForce), ForceMode2D.Force);
 			particles.Emit (1);
 		} else {
-			//particles.Stop ();
+			particles.Stop ();
 		}
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			rigid.AddRelativeForce (new Vector2 (0f, thrusterForce), ForceMode2D.Force);
 			particles.Emit (1);
 		} else {
-			//particles.Stop ();
+			particles.Stop ();
 		}
 
 			

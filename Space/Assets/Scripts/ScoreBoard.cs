@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class ScoreBoard : MonoBehaviour {
 
 	public int score;
-	public Text display;
+	public Text currentDisplay;
 	public Text highscoreDisplay;
 
 
 	void Start () {
 		score = 0;
-		if (display != null) {
-			display.text = score.ToString ();
+		if (currentDisplay != null) {
+			currentDisplay.text = score.ToString ();
 		}
 		if (highscoreDisplay != null)
 			highscoreDisplay.text = GetScore ().ToString ();
@@ -21,7 +21,7 @@ public class ScoreBoard : MonoBehaviour {
 
 	public void IncrementScoreBoard(int valUe){
 		score += valUe;
-		display.text = score.ToString ();
+		currentDisplay.text = score.ToString ();
 	}
 
 	public void SaveScore(){

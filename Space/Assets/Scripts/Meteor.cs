@@ -57,35 +57,3 @@ public class Meteor : MonoBehaviour {
 	*/
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//	void OnCollisionEnter2D (Collision2D myCollider) {
-
-//		health--;
-//		count++;
-//		if (count > picture.Length - 1) {
-//			count--;
-//		}
-
-//		GetComponent<SpriteRenderer>().sprite = picture[count];
-
-//		if (health <= 0) {
-//			LevelManager.MeteorCount--;
-//			Destroy (this.gameObject);
-//	}
-
-
-//	}

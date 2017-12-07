@@ -11,6 +11,8 @@ public class Health : MonoBehaviour {
 	public GameObject scoreboard;
 
 	private void Start(){
+
+		scoreboard = FindObjectOfType<ScoreBoard> ().gameObject;
 		if (MePlayer()) {
 			ShowHearts ();
 		}
@@ -24,16 +26,17 @@ public class Health : MonoBehaviour {
 		}
 	}
 
-	public void IncrementHealth(int damage) {
-		health += damage;
+	public void IncrementHealth(int value) {
+		health += value;
+		//damage instead of value?^^
 		if (health <= 0) {
 			Destroy (gameObject);
 			Instantiate (explosionEffect, transform.position, Quaternion.identity);
 			if (!MePlayer ()) {
-//				IncrementScore ();
+				IncrementScore ();
 			}
 			if (MePlayer()) {
-				gameObject.GetComponent<PlayerController> ().levelManager.GetComponent<LevelManager> ().LoadNextLevel ();
+				gameObject.GetComponent<PlayerController>().levelManager.GetComponent<LevelManager>().LoadNextLevel();
 			}
 		}
 		if (MePlayer()) {
