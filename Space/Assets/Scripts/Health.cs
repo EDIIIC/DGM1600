@@ -1,21 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
 	public int health;
 	public GameObject explosionEffect;
 	public GameObject[] hearts;
-//	public GameObject scoreboard;
+	public GameObject scoreboard;
 
 	private void Start(){
-	
 		if (MePlayer()) {
 			ShowHearts ();
 		}
 	}
+
 	private bool MePlayer(){
 		if (GetComponent<PlayerController> ()) {
 			return true;
@@ -52,11 +52,12 @@ public class Health : MonoBehaviour {
 		}
 	
 	}
-
-
+		
 	public int GetHealth(){
 		return health;
 	}
 
-//	private void IncrementScore
+	private void IncrementScore(){
+		scoreboard.GetComponent<ScoreBoard> ().IncrementScoreBoard (10);
+	}
 }

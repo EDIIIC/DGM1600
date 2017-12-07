@@ -7,16 +7,39 @@ public class ScoreBoard : MonoBehaviour {
 
 	public int score;
 	public Text display;
+	public Text highscoreDisplay;
 
 
-	// Use this for initialization
 	void Start () {
-//		score = 0;
-//		display.text = score;
+		score = 0;
+		if (display != null) {
+			display.text = score.ToString ();
+		}
+		if (highscoreDisplay != null)
+			highscoreDisplay.text = GetScore ().ToString ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void IncrementScoreBoard(int valUe){
+		score += valUe;
+		display.text = score.ToString ();
 	}
+
+	public void SaveScore(){
+		//Check previous score
+		int oldScore = GetScore();
+
+		//if new score is higher than previous score
+		if(score > oldScore)
+
+			PlayerPrefs.SetInt ("HighScore", score);
+	}
+
+	public int GetScore(){
+		return PlayerPrefs.GetInt ("HighScore");
+	}
+
+	public void OnDisable(){
+		SaveScore ();
+	}
+
 }

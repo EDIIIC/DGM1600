@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 60250976697130398}
   - component: {fileID: 114465897320316072}
   - component: {fileID: 114267116974276106}
-  - component: {fileID: 114645052275179916}
   m_Layer: 10
   m_Name: Meteor Grey
   m_TagString: Untagged
@@ -120,10 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b0c3d2346b4e09baa47fd5c1ca58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 2
   explosionEffect: {fileID: 1585424512478560, guid: ae6e4248dd3f3496eae93fe8d9937ad0,
     type: 2}
   hearts: []
+  scoreboard: {fileID: 0}
 --- !u!114 &114465897320316072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,21 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d57e61621a5f47c4b77508edcbab302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  picture: []
   startingSpin: 0.05
   speed: 160
---- !u!114 &114645052275179916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099701903732200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2406f8bcd7b8a49e89a66f76249f0820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212988568662510226
 SpriteRenderer:
   m_ObjectHideFlags: 1
