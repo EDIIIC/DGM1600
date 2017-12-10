@@ -30,15 +30,15 @@ public class PowerUp : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("We hit a powerup!");
 
-		if (powerUptype == Type.zoomer) {
-		}
+//		if (powerUptype == Type.zoomer) {
+//		}
 
 		switch (powerUptype) {
 		case Type.zoomer:
-			other.GetComponent<PlayerController> ().moveSpeed *= 2;
+			other.GetComponent<PlayerController> ().moveSpeed *= 1.5f;
 			break;
 		case Type.shield:
-
+			other.GetComponent<Health> ().health += 1;
 			break;
 		
 		}

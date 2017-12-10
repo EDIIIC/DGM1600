@@ -345,7 +345,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892217879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 84.999985, z: 0}
+  m_LocalPosition: {x: -3, y: 91, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 614945328}
@@ -353,7 +353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 84.999985}
+  m_AnchoredPosition: {x: -3, y: 91}
   m_SizeDelta: {x: -195.29993, y: -242.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892217881
@@ -419,7 +419,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1193332346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 85, z: 0}
+  m_LocalPosition: {x: 1.8999939, y: 95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614945328}
@@ -427,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 1.9, y: 95}
   m_SizeDelta: {x: -195.29999, y: -242.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193332348
@@ -852,7 +852,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2056438863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000076293945, y: -285.28, z: 0}
+  m_LocalPosition: {x: 0.000015258789, y: -272.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614945328}
@@ -860,8 +860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: -285.28}
-  m_SizeDelta: {x: 222.6, y: 30}
+  m_AnchoredPosition: {x: 0.000011444, y: -272.3}
+  m_SizeDelta: {x: 260, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056438865
 MonoBehaviour:
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -884,20 +884,22 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79cb50363301449eabdf02760dc8fe0a, type: 3}
-    m_FontSize: 15
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'MUSIC BY
 
-    LOBO LOCO'
+    Steve Combs & Delta Is
+
+    Under Attribution License'
 --- !u!222 &2056438866
 CanvasRenderer:
   m_ObjectHideFlags: 0
