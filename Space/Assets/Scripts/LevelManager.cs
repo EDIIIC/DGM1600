@@ -10,11 +10,13 @@ public class LevelManager : MonoBehaviour {
 	public static int LaserCount;
 
 
-	void Start(){
-
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+	//		LoadNextLevel ();
+			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex - 1);
+		}
 	}
-
-
+		
 	public void LevelLoad (string lvl) {
 		SceneManager.LoadScene (lvl);
 	}
