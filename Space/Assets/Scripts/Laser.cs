@@ -8,13 +8,13 @@ public class Laser : MonoBehaviour {
 	public Sprite[] picture;
 //	private int count= 0;
 	public float lifetime;
-	public AudioSource audio;
+	public AudioSource audioSource;
 	public int damage;
 //	public float speed;
 
 
 	void Start(){
-		audio.pitch = Random.Range (1f, 2f);
+		audioSource.pitch = Random.Range (1f, 2f);
 	}
 
 

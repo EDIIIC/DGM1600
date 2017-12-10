@@ -14,12 +14,12 @@ TagManager:
   - UI
   - 
   - 
-  - player
-  - laser
-  - meteor
-  - powerup
-  - 
-  - 
+  - Player
+  - Laser
+  - Meteor
+  - Powerup
+  - Walls
+  - GameOver
   - 
   - 
   - 
