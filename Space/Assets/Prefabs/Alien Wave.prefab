@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b0c3d2346b4e09baa47fd5c1ca58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 1585424512478560, guid: ae6e4248dd3f3496eae93fe8d9937ad0,
     type: 2}
   hearts: []
