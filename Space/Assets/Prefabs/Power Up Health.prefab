@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114432876013183558}
   - component: {fileID: 61424289180709296}
   m_Layer: 11
-  m_Name: Power Up Sheild
+  m_Name: Power Up Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
