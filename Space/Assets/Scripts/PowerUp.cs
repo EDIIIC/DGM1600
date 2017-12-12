@@ -35,7 +35,7 @@ public class PowerUp : MonoBehaviour {
 
 		switch (powerUptype) {
 		case Type.zoomer:
-			other.GetComponent<PlayerController> ().moveSpeed *= 1.5f;
+			other.GetComponent<PlayerController> ().moveSpeed *= 2;
 			break;
 		case Type.shield:
 			other.GetComponent<Health> ().health += 1;

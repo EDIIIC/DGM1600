@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour {
 
-	public int health;
+//	public int health;
 	public Sprite[] picture;
 //	private int count= 0;
 	public float lifetime;

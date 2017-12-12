@@ -19,7 +19,7 @@ public class Meteor : MonoBehaviour {
 		rigid = GetComponent<Rigidbody2D> ();
 
 		//Where to go      
-		transform.right = player.transform.position - transform.position;
+//		transform.right = player.transform.position - transform.position;
 
 		//speed
 		rigid.AddRelativeForce(new Vector2(Random.Range(0,speed),0f),ForceMode2D.Force);
