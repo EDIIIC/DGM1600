@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4825661457760128}
   - component: {fileID: 212094882180923810}
   - component: {fileID: 95023012708093086}
-  - component: {fileID: 114530797884898212}
   - component: {fileID: 61948629023371520}
   m_Layer: 11
   m_Name: Power Up
@@ -52,14 +51,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.3}
+    oldSize: {x: 0.3, y: 0.3}
     newSize: {x: 0.19, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -85,21 +84,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114530797884898212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1349515369006580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6a28e16f1524dd2bb0fffd1e76539a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUptype: 1
-  images:
-  - {fileID: 21300000, guid: 9a10fe5bfab6e4ee5aaac265e8693d5d, type: 3}
-  - {fileID: 21300000, guid: 9a10fe5bfab6e4ee5aaac265e8693d5d, type: 3}
 --- !u!212 &212094882180923810
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -134,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a10fe5bfab6e4ee5aaac265e8693d5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bb3b53b1a9c647fd8ee72de2612ebd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

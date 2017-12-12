@@ -30,9 +30,6 @@ public class PowerUp : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("We hit a powerup!");
 
-//		if (powerUptype == Type.zoomer) {
-//		}
-
 		switch (powerUptype) {
 		case Type.zoomer:
 			other.GetComponent<PlayerController> ().moveSpeed *= 2;
@@ -45,4 +42,28 @@ public class PowerUp : MonoBehaviour {
 
 		Destroy (this.gameObject);
 	}
+
+	/*
+	public class PickUpScript : MonoBehaviour 
+	{
+		public GameObject shield;
+
+		void OnTriggerEnter2D(Collider2D col)
+		{
+
+			if(col.gameObject.tag == "PowerUpShield")
+			{
+				SpawnShield();
+				Destroy(GameObject.FindGameObjectWithTag("PowerUpShield"));
+			}
+		}
+
+		public void SpawnShield()
+		{
+			Instantiate(shield, GetComponent<PlayerController>().shotPos.transform.position,
+				GetComponent<PlayerController>().shotPos.transform.rotation);
+		}
+	}
+	*/
 }
+
