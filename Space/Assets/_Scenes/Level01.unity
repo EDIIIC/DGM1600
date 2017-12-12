@@ -4082,8 +4082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6747736b188a41f68a0f2865d4356ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinSpawnTime: 30
-  MaxSpawnTime: 35
+  MinSpawnTime: 20
+  MaxSpawnTime: 30
   enemies:
   - {fileID: 1464822931151776, guid: 38a6bc40797114fee9a7df401ceea3a5, type: 2}
 --- !u!4 &677939005
