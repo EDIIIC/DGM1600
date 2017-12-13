@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 511
     width: 683
     height: 363
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 342}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 103
+  controlID: 25
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -377,9 +377,9 @@ MonoBehaviour:
     height: 853
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 0e070000
     m_LastClickedID: 0
-    m_ExpandedIDs: e841fcff7617feff347cfeff2a7dfeffb281feff1283feff44c5feff04c6feff2cc7feff34c7feff4cc7feff6ee0feffe6e0feff08e2feff0ce2feff20e2feff24fbfeff96fbfeffbafcfeffbefcfeffd2fcfeff0249ffff7449ffff964affff9a4affffae4affff3a63fffffc63ffff1e65ffff2265ffff3665fffff492ffffb493ffffd894ffffdc94fffff094ffffa6baffff20bbffff42bcffff46bcffff5abcffff70e0ffff18e1ffff3ae2ffff3ee2ffff52e2ffffa6fbffff000000001a460000164b000016500000
+    m_ExpandedIDs: a6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +472,8 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -483,7 +484,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 0e260000
     m_LastClickedID: 9742
-    m_ExpandedIDs: 00000000222700003227000060280000d8280000de2900002c2c0000982e0000
+    m_ExpandedIDs: 000000002227000060280000e0290000a02e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -511,21 +512,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000222700003227000060280000de290000322a0000082b00002c2c0000982e0000
+    m_ExpandedIDs: 000000002227000060280000e0290000342c0000a02e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Shield
-      m_OriginalName: Shield
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 31584
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
